@@ -1,0 +1,37 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.footer {
+  background: #383c3f;
+  color: #7b858b;
+  padding: 3rem 0;
+  font-size: 0.75rem;
+
+  .container {
+    @include container;
+  }
+
+  .list {
+    @include media-md-up {
+      width: 25%;
+    }
+
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: $base-unit * 2;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+    color: #7b858b;
+  }
+
+  a {
+    color: #7b858b;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

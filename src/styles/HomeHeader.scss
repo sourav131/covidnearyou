@@ -1,0 +1,97 @@
+@import './variables';
+@import './mixins';
+
+.container {
+  position: relative;
+  height: 100vh;
+  color: #fff !important;
+
+  .textContainer {
+    @include container;
+    color: #fff !important;
+    position: relative;
+    z-index: 1;
+    padding-top: 40vh;
+
+    @include media-sm {
+      padding-top: 10vh;
+    }
+  }
+
+  .backgroundImg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../images/harvard-thermometer1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .nav {
+    @include container;
+    z-index: 1;
+    position: relative;
+    padding: 24px;
+
+    .navRight {
+      display: inline-block;
+      float: right;
+
+      @include media-sm {
+        display: none;
+      }
+    }
+
+    .brand {
+      font-size: 20px;
+      display: inline-block;
+
+      svg {
+        display: inline;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .btnGroup {
+    margin-top: $base-unit * 5;
+
+    .btnBase {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      border-radius: 34px;
+      color: #fff;
+      font-size: 20px;
+      padding: 15px 23px;
+
+      svg {
+        vertical-align: bottom;
+        margin-right: $base-unit;
+      }
+
+      @include media-sm {
+        width: 100%;
+      }
+    }
+
+    .btnGood {
+      border: 2px solid #00eb7a;
+      @extend .btnBase;
+
+      @include media-sm {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: $base-unit * 2;
+      }
+    }
+
+    .btnBad {
+      border: 2px solid #d10300;
+      @extend .btnBase;
+    }
+  }
+}

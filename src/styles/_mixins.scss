@@ -1,0 +1,20 @@
+@import './variables';
+
+@mixin container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding-left: $base-unit * 2;
+  padding-right: $base-unit * 2;
+}
+
+@mixin media-sm {
+  @media only screen and (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
+    @content;
+  }
+}
+
+@mixin media-md-up {
+  @media only screen and (min-width: map-get($map: $grid-breakpoints, $key: sm)) {
+    @content;
+  }
+}
