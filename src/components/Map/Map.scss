@@ -1,4 +1,14 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.mapContainer {
+  display: inline-block;
+  width: 60%;
+
+  @include media-sm {
+    width: 100%;
+  }
+}
 
 .icon {
   border-radius: 50%;
@@ -39,6 +49,10 @@
 
 .detailsContainer {
   width: 40%;
+
+  @include media-sm {
+    width: 100%;
+  }
   display: inline-block;
   vertical-align: top;
 

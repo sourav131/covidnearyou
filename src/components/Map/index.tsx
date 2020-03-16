@@ -53,16 +53,17 @@ const Map: SFC<{ data: MarkerType[] }> = ({ data = [] }) => {
 
   return (
     <div>
-      <ReactMapGL
-        style={{ display: 'inline-block' }}
-        {...viewport}
-        width={isWide ? '60%' : '100%'}
-        height={800}
-        mapboxApiAccessToken="pk.eyJ1IjoiaGVhbHRobWFwIiwiYSI6ImNrN3RybjdkazA3enMza3M1aW9wanRkbWUifQ.-KNi92VWNn58VjE4C1qddw"
-        onViewportChange={(v) => setViewport(v)}
-      >
-        <Markers data={data} onMarkerPress={(datum) => setCurrentPoint(datum)} />
-      </ReactMapGL>
+      <div className={styles.mapContainer}>
+        <ReactMapGL
+          {...viewport}
+          width={'100%'}
+          height={800}
+          mapboxApiAccessToken="pk.eyJ1IjoiaGVhbHRobWFwIiwiYSI6ImNrN3RybjdkazA3enMza3M1aW9wanRkbWUifQ.-KNi92VWNn58VjE4C1qddw"
+          onViewportChange={(v) => setViewport(v)}
+        >
+          <Markers data={data} onMarkerPress={(datum) => setCurrentPoint(datum)} />
+        </ReactMapGL>
+      </div>
       <div className={styles.detailsContainer}>
         <div className={styles.container}>
           <hr className={styles.divider} />
