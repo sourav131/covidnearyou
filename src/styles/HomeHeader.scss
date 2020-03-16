@@ -81,6 +81,7 @@
     .btnGood {
       border: 2px solid #00eb7a;
       @extend .btnBase;
+      margin-right: $base-unit * 2;
 
       @include media-sm {
         width: 100%;

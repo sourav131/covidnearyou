@@ -11,14 +11,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@react-google-maps/api": "^1.8.5",
+    "@types/react-map-gl": "^5.2.0",
     "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.3.0",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.5",
+    "next-seo": "^4.4.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-icons": "^3.9.0"
+    "react-icons": "^3.9.0",
+    "react-map-gl": "^5.2.3",
+    "react-use": "^13.27.0"
   },
   "devDependencies": {
     "@types/node": "^13.9.1",
